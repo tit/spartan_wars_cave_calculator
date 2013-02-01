@@ -1,0 +1,21 @@
+form method="post" action="result"
+  div class="well"
+    div
+      label Военная академия
+    - for arms_center in @arms_centers do
+      div
+        input type="number" name="#{arms_center[:name]}" placeholder="#{arms_center[:russian]}" title="#{arms_center[:english]}"
+
+  - for count in 1..@max_cave_count do
+    div class="well"
+      div
+        label Тип войск #{count}
+      div
+        select name="who_in_cave[]"
+          - for who_in_cave in @who_in_caves do
+            option value="#{who_in_cave[:value]}" title="#{who_in_cave[:english]}" #{who_in_cave[:russian]}
+        div
+          input type="number" name="who_count[]" placeholder="Количество" title="count"
+
+  div class="well"
+    input type="submit" class="btn btn-primary"

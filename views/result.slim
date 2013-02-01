@@ -1,0 +1,7 @@
+span Нужно отправить любой из тип войск ниже
+div class="well"
+  - for result in @results do
+    span class="label label-inverse" #{result[:who]}
+    i class="icon-arrow-right"
+    span class="badge badge-inverse" #{result[:count]}
+    br
