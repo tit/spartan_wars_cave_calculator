@@ -283,7 +283,7 @@ post "/result" do
 
                  [
                      {
-                         :who => "лучник",
+                         :who => "топорщик",
                          :count => axeman
                      }
                  ]
@@ -697,4 +697,8 @@ end
 
 get "/contacts" do
   slim :contacts
+end
+
+get "/faq" do
+  slim :faq
 end
